@@ -1,0 +1,30 @@
+{
+  "name": "wtm-api",
+  "description": "wtm api",
+  "version": "0.0.2",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "author": {
+    "name": "hwanbinyoo",
+    "url": "https://github.com/HWANBINYOO"
+  },
+  "files": [
+    "./dist",
+    "./src"
+  ],
+  "bugs": {
+    "url": "https://github.com/WTM-whatTodayMedia/wtm-api/issues",
+    "email": "dngh0825m@gmail.com"
+  },
+  "homepage": "https://tim-v2.netlify.app/",
+  "repository": "https://github.com/WTM-whatTodayMedia/wtm-api.git",
+  "keywords": [
+    "wtm",
+    "whatTodayMedia",
+    "movie",
+    "entertainment",
+    "drama",
+    "media"
+  ]
+}

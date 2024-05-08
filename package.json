@@ -1,7 +1,7 @@
 {
   "name": "wtm-api",
   "description": "wtm api",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license": "MIT",
   "type": "module",
   "main": "index.js",
@@ -9,10 +9,21 @@
     "name": "hwanbinyoo",
     "url": "https://github.com/HWANBINYOO"
   },
+  "scripts": {
+    "build": "yarn build:tsc",
+    "build:tsc": "yarn tsc"
+  },
   "files": [
     "./dist",
     "./src"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "bugs": {
     "url": "https://github.com/WTM-whatTodayMedia/wtm-api/issues",
     "email": "dngh0825m@gmail.com"
@@ -26,5 +37,9 @@
     "entertainment",
     "drama",
     "media"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "typescript": "^5.4.5"
+  }
 }

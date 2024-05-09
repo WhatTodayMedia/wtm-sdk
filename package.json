@@ -1,17 +1,20 @@
 {
   "name": "wtm-api",
   "description": "wtm api",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "license": "MIT",
   "type": "module",
-  "main": "index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
   "author": {
     "name": "hwanbinyoo",
     "url": "https://github.com/HWANBINYOO"
   },
   "scripts": {
-    "build": "yarn build:tsc",
-    "build:tsc": "yarn tsc"
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build": "yarn build:cjs && yarn build:esm"
   },
   "files": [
     "./dist",
@@ -39,7 +42,7 @@
     "media"
   ],
   "devDependencies": {
-    "@types/node": "^20.12.10",
+    "@types/node": "^20.12.11",
     "typescript": "^5.4.5"
   }
 }

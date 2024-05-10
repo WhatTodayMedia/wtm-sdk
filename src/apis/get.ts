@@ -1,5 +1,5 @@
 import { collection, getDocs, query, orderBy, where } from "firebase/firestore";
-import { db } from "./fbase";
+import { db } from "../utils/fbase";
 
 export const getWtmData = async () => {
   const arr: any = [];
@@ -27,6 +27,17 @@ export const getWtmSearchData = async (category: string, keyword: string) => {
     where(category, ">=", keyword),
     where(category, "<=", keyword + "\uf8ff")
   );
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => arr.push(doc.data()));
+  return arr;
+};
+
+export const getWtmDetailData = async (
+  subDocument: string,
+  subCollection: string
+) => {
+  const arr: any = [];
+  const q = query(collection(db, "media", subDocument, subCollection));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));
   return arr;

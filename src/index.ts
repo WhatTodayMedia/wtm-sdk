@@ -1,4 +1,4 @@
-import { ListPropsType } from "./types/list";
+import { WtmListType } from "./types/list";
 import { getWtmData, getWtmCategoryData, getWtmSearchData } from "./utils/apis";
 
-export { getWtmData, getWtmCategoryData, getWtmSearchData, ListPropsType };
+export { getWtmData, getWtmCategoryData, getWtmSearchData, WtmListType };

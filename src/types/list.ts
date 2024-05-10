@@ -6,9 +6,6 @@ export interface WtmListType {
   category: CategoryType[];
   grade: number;
   recommended: boolean;
-}
-
-export interface WtmListDetailType extends WtmListType {
   famousLine: string;
   date: {
     start: string;

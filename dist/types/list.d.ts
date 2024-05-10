@@ -1,9 +1,11 @@
-export interface ListPropsType {
+export interface WtmListType {
     title: string;
+    described: string;
+    thumbnailUrl: URL;
     tag: "영화" | "드라마" | "예능";
     category: CategoryType[];
-    described: string;
-    grade: string;
+    grade: number;
+    recommended: boolean;
     famousLine: string;
     date: {
         start: string;
@@ -12,8 +14,6 @@ export interface ListPropsType {
     ost: URL;
     trailer: URL;
     watchaPedia: URL;
-    thumbnailUrl: URL;
-    id: string;
 }
 export interface CategoryType {
     color: string;

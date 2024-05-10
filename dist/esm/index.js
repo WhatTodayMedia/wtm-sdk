@@ -1,2 +1,2 @@
-import { getWtmData, getWtmCategoryData, getWtmSearchData } from "./utils/apis";
+import { getWtmData, getWtmCategoryData, getWtmSearchData } from "./apis/get";
 export { getWtmData, getWtmCategoryData, getWtmSearchData };

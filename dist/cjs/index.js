@@ -1,19 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.divide = exports.multiply = exports.subtract = exports.add = void 0;
-function add(a, b) {
-    return a + b;
-}
-exports.add = add;
-function subtract(a, b) {
-    return a - b;
-}
-exports.subtract = subtract;
-function multiply(a, b) {
-    return a * b;
-}
-exports.multiply = multiply;
-function divide(a, b) {
-    return a / b;
-}
-exports.divide = divide;
+exports.getWtmSearchData = exports.getWtmCategoryData = exports.getWtmData = void 0;
+const apis_1 = require("./utils/apis");
+Object.defineProperty(exports, "getWtmData", { enumerable: true, get: function () { return apis_1.getWtmData; } });
+Object.defineProperty(exports, "getWtmCategoryData", { enumerable: true, get: function () { return apis_1.getWtmCategoryData; } });
+Object.defineProperty(exports, "getWtmSearchData", { enumerable: true, get: function () { return apis_1.getWtmSearchData; } });

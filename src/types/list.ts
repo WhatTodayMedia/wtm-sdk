@@ -6,7 +6,6 @@ export interface WtmListType {
   category: CategoryType[];
   grade: number;
   recommended: boolean;
-  id: string;
 }
 
 export interface WtmListDetailType extends WtmListType {
@@ -18,7 +17,6 @@ export interface WtmListDetailType extends WtmListType {
   ost: URL;
   trailer: URL;
   watchaPedia: URL;
-  id: string;
 }
 
 export interface CategoryType {

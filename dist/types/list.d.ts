@@ -1,7 +1,7 @@
 export interface WtmListType {
     title: string;
     described: string;
-    thumbnailUrl: URL;
+    thumbnailUrl: string;
     tag: "영화" | "드라마" | "예능";
     category: CategoryType[];
     grade: number;
@@ -11,9 +11,9 @@ export interface WtmListType {
         start: string;
         end: string;
     };
-    ost: URL;
-    trailer: URL;
-    watchaPedia: URL;
+    ost: string;
+    trailer: string;
+    watchaPedia: string;
 }
 export interface CategoryType {
     color: string;

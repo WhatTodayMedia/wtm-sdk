@@ -1,7 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getWtmSearchData = exports.getWtmCategoryData = exports.getWtmData = void 0;
+exports.CategoryItems = exports.createWtmData = exports.getWtmSearchData = exports.getWtmCategoryData = exports.getWtmData = void 0;
 const get_1 = require("./apis/get");
 Object.defineProperty(exports, "getWtmData", { enumerable: true, get: function () { return get_1.getWtmData; } });
 Object.defineProperty(exports, "getWtmCategoryData", { enumerable: true, get: function () { return get_1.getWtmCategoryData; } });
 Object.defineProperty(exports, "getWtmSearchData", { enumerable: true, get: function () { return get_1.getWtmSearchData; } });
+const add_1 = require("./apis/add");
+Object.defineProperty(exports, "createWtmData", { enumerable: true, get: function () { return add_1.createWtmData; } });
+const data_1 = require("./utils/data");
+Object.defineProperty(exports, "CategoryItems", { enumerable: true, get: function () { return data_1.CategoryItems; } });

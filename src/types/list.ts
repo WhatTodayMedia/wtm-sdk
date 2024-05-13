@@ -8,8 +8,8 @@ export interface WtmListType {
   recommended: boolean;
   famousLine: string;
   date: {
-    start: string;
-    end: string;
+    start: Date;
+    end: Date;
   };
   ost: string;
   trailer: string;

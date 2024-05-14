@@ -1,1 +1,16 @@
-export declare const CategoryItems: readonly ["휴먼", "로멘스", "액션", "판타지", "범죄", "스릴러", "미스터리", "코미디", "느와르", "서바이벌", "호러", "SF"];
+export declare const Colors: Record<string, string>;
+export declare const CategoryColors: {
+    휴먼: string;
+    로맨스: string;
+    액션: string;
+    판타지: string;
+    범죄: string;
+    스릴러: string;
+    미스터리: string;
+    코미디: string;
+    느와르: string;
+    서바이벌: string;
+    호러: string;
+    SF: string;
+};
+export declare const CategoryItems: string[];

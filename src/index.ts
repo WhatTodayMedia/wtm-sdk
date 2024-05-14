@@ -1,7 +1,7 @@
 import { WtmListType } from "./types/list";
 import { getWtmData, getWtmCategoryData, getWtmSearchData } from "./apis/get";
 import { createWtmData } from "./apis/add";
-import { CategoryItems } from "./utils/data";
+import { CategoryColors, CategoryItems } from "./utils/data";
 
 export {
   getWtmData,
@@ -10,4 +10,5 @@ export {
   createWtmData,
   WtmListType,
   CategoryItems,
+  CategoryColors,
 };

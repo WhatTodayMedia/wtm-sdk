@@ -1,5 +1,8 @@
 # WTM API
 
+![](https://img.shields.io/npm/d18m/wtm-api) ![](https://img.shields.io/npm/v/wtm-api
+) ![](https://img.shields.io/github/stars/whatTodayMedia/wtm-api
+)
 
 ## Installation
 

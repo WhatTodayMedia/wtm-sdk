@@ -4,10 +4,10 @@ export interface WtmListType {
     thumbnailUrl: string;
     tag: "영화" | "드라마" | "예능";
     category: string[];
-    grade: number;
+    grade: string;
     recommended: boolean;
     famousLine: string;
-    startDate: Date;
+    startDate: Date | string;
     endDate?: Date;
     ost: string;
     trailer: string;

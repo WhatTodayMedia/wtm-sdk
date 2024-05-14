@@ -3,20 +3,13 @@ export interface WtmListType {
   described: string;
   thumbnailUrl: string;
   tag: "영화" | "드라마" | "예능";
-  category: CategoryType[];
+  category: string[];
   grade: number;
   recommended: boolean;
   famousLine: string;
-  date: {
-    start: Date;
-    end: Date;
-  };
+  startDate: Date;
+  endDate?: Date;
   ost: string;
   trailer: string;
   watchaPedia: string;
-}
-
-export interface CategoryType {
-  color: string;
-  name: string;
 }

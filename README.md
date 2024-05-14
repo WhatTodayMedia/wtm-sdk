@@ -35,16 +35,38 @@ import {
 
 ## method
 
-```ts
-getWtmData() // 모든데이터 조회
-getWtmCategoryData(category : string, sort : asc | desc) // 장르, 카테고리
-getWtmSearchData(keyword : string, category : string ?? 'title') // 검색
-getWtmDetailData(subDocument : string, subCollection : string) // 데이터 세부사항 조회
+### getWtmData()
 
-createWtmData(createObj: WtmListType) // 데이터 생성
-```
+모든데이터 조회
 
-### ex data.json
+### getWtmFilterData(filterName : string, sort : asc | desc)
+
+장르, 카테고리 조회
+
+- filterName : 필터할 태그나 카테고리명
+- sort(Optional) : 정렬차순(기본값 내림차순)
+
+### getWtmSearchData(keyword : string, category : string)
+
+검색데이터 조회
+
+- keyword : 검색할 값
+- category(Optional) : 검색할 카테고리(기본값 제목)
+
+### getWtmDetailData(subDocument : string, subCollection : string)
+
+데이터 세부사항 조회
+
+- subDocument : 문서이름
+- subCollection : 세부 컬렉션 이름
+
+### createWtmData(createObj: WtmListType)
+
+데이터 생성
+
+- createObj : 생성할 데이터
+
+### ex) data.json
 
 ```js
 {
@@ -91,7 +113,7 @@ export interface WtmListType {
 }
 ```
 
-### Colors, CategoryColors
+### Colors, CategoryColors data
 
 ```ts
 import { Colors, CategoryColors } from "wtm-api";

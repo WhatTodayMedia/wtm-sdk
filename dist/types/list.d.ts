@@ -8,7 +8,7 @@ export interface WtmListType {
     recommended: boolean;
     famousLine: string;
     startDate: Date | string;
-    endDate?: Date;
+    endDate: Date | string | null | undefined;
     ost: string;
     trailer: string;
     watchaPedia: string;

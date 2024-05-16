@@ -17,7 +17,7 @@ export interface WtmListType {
 export type CategoryType =
   | "휴먼"
   | "로맨스"
-  | "액션 "
+  | "액션"
   | "판타지"
   | "범죄"
   | "스릴러"

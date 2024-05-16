@@ -1,3 +1,5 @@
+import { CategoryType } from "../../types";
+
 export const Colors: Record<string, string> = {
   red: "#FF7D7D",
   purple: "#55155d",
@@ -12,7 +14,7 @@ export const Colors: Record<string, string> = {
   brown: "#a95e13",
 };
 
-export const CategoryColors = {
+export const CategoryColors: Record<CategoryType, string> = {
   휴먼: Colors.orange,
   로맨스: Colors.purple,
   액션: Colors.red,
@@ -27,7 +29,7 @@ export const CategoryColors = {
   SF: Colors.green,
 };
 
-export const CategoryItems = Object.keys(CategoryColors);
+export const CategoryItems = Object.keys(CategoryColors) as CategoryType[];
 
 // 휴먼 : 주
 // 로멘스 : 보

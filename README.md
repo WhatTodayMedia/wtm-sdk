@@ -38,12 +38,12 @@ import {
 
 모든데이터 조회
 
-### getWtmFilterData(filterCategory : string, filterName : string)
+### getWtmFilterData(filterCategory : string, filterNames : string[])
 
 장르, 카테고리 조회
 
 - filterCategory : 필터할 태그나 카테고리 종류
-- filterName : 필터할 태그나 카테고리이름
+- filterNames : 필터할 태그나 카테고리이름들
 
 ### getWtmSearchData(keyword : string, category : string)
 

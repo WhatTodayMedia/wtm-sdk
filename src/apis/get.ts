@@ -11,12 +11,12 @@ export const getWtmData = async () => {
 
 export const getWtmFilterData = async (
   filterCategory: string,
-  filterName: string
+  filterNames: string[]
 ) => {
   const arr: any = [];
   const q = query(
     collection(db, "media"),
-    where(filterCategory, "array-contains", filterName)
+    where(filterCategory, "array-contains-any", filterNames)
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));

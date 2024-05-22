@@ -1,5 +1,6 @@
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../utils/fbase";
+import { TagType } from "..";
 
 export const getWtmData = async () => {
   const arr: any = [];
@@ -10,13 +11,14 @@ export const getWtmData = async () => {
 };
 
 export const getWtmFilterData = async (
-  filterCategory: string,
+  tagNames: TagType[],
   filterNames: string[]
 ) => {
   const arr: any = [];
   const q = query(
     collection(db, "media"),
-    where(filterCategory, "array-contains-any", filterNames)
+    where("category", "in", filterNames),
+    where("tag", "in", tagNames)
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));

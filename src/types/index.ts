@@ -28,4 +28,4 @@ export type CategoryType =
   | "호러"
   | "SF";
 
-export type TagType = "영화" | "드라마" | "예능";
+export type TagType = "영화" | "드라마" | "예능" | "전체";

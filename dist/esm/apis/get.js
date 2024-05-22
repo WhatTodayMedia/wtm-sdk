@@ -9,7 +9,7 @@ export const getWtmData = async () => {
 };
 export const getWtmFilterData = async (filterCategory, filterName) => {
     const arr = [];
-    const q = query(collection(db, "media"), where(filterCategory, "==", filterName));
+    const q = query(collection(db, "media"), where(filterCategory, "array-contains", filterName));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
     return arr;

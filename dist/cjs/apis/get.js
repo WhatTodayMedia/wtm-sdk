@@ -13,7 +13,7 @@ const getWtmData = async () => {
 exports.getWtmData = getWtmData;
 const getWtmFilterData = async (filterCategory, filterName) => {
     const arr = [];
-    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)(filterCategory, "==", filterName));
+    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)(filterCategory, "array-contains", filterName));
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
     return arr;

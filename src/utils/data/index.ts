@@ -32,7 +32,7 @@ export const CategoryColors: Record<CategoryType, string> = {
 export const CategoryItems = Object.keys(CategoryColors) as CategoryType[];
 
 // 휴먼 : 주
-// 로멘스 : 보
+// 로맨스 : 보
 // 액션 ; 빨
 // 판타지 : 파
 // 범죄 : 회

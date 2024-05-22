@@ -38,12 +38,12 @@ import {
 
 모든데이터 조회
 
-### getWtmFilterData(filterName : string, sort : asc | desc)
+### getWtmFilterData(filterCategory : string, filterName : string)
 
 장르, 카테고리 조회
 
-- filterName : 필터할 태그나 카테고리명
-- sort(Optional) : 정렬차순(기본값 내림차순)
+- filterCategory : 필터할 태그나 카테고리 종류
+- filterName : 필터할 태그나 카테고리이름
 
 ### getWtmSearchData(keyword : string, category : string)
 
@@ -72,7 +72,7 @@ import {
   tag: "영화",
   title: "너와 나",
   thumbnailUrl: "imgUrl.jpg",
-  category: ['로멘스'],
+  category: ['로맨스'],
   described: '“오늘은 너한테 꼭 하고 싶은 말이 있는데”
               수학여행을 하루 앞둔 오후, 세미는 이상한 꿈에서 깨어나 하은에게로 향한다. 오랫동안 눌러왔던 마음을 오늘은 반드시 전해야 할 것 같은 기분이 들었기 때문이다.
               하지만 넘쳐 흐르는 마음과 달리 자꾸만 어긋나는 두 사람. 서툰 오해와 상처를 뒤로하고, 세미는 하은에게 진심을 고백할 수 있을까?',

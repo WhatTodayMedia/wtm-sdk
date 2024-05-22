@@ -29,7 +29,7 @@ exports.CategoryColors = {
 };
 exports.CategoryItems = Object.keys(exports.CategoryColors);
 // 휴먼 : 주
-// 로멘스 : 보
+// 로맨스 : 보
 // 액션 ; 빨
 // 판타지 : 파
 // 범죄 : 회

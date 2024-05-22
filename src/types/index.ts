@@ -2,7 +2,7 @@ export interface WtmListType {
   title: string;
   described: string;
   thumbnailUrl: string;
-  tag: "영화" | "드라마" | "예능";
+  tag: TagType;
   category: CategoryType[];
   grade: string;
   recommended: boolean;
@@ -27,3 +27,5 @@ export type CategoryType =
   | "서바이벌"
   | "호러"
   | "SF";
+
+export type TagType = "영화" | "드라마" | "예능";

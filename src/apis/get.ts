@@ -11,14 +11,18 @@ export const getWtmData = async () => {
 };
 
 export const getWtmFilterData = async (
-  tagNames: TagType[],
+  tagName: TagType[],
   filterNames: string[]
 ) => {
   const arr: any = [];
   const q = query(
     collection(db, "media"),
     where("category", "in", filterNames),
-    where("tag", "in", tagNames)
+    where(
+      "tag",
+      "in",
+      tagName[0] === "전체" ? ["영화", "드라마", "예능"] : tagName
+    )
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));

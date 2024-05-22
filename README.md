@@ -98,7 +98,7 @@ export interface WtmListType {
   title: string;
   described: string;
   thumbnailUrl: string;
-  tag: "영화" | "드라마" | "예능";
+  tag: "영화" | "드라마" | "예능" | "전체";
   category: string[];
   grade: string;
   recommended: boolean;

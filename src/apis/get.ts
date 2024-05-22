@@ -10,11 +10,14 @@ export const getWtmData = async () => {
 };
 
 export const getWtmFilterData = async (
-  filterName: string,
-  sort?: "asc" | "desc"
+  filterCategory: string,
+  filterName: string
 ) => {
   const arr: any = [];
-  const q = query(collection(db, "media"), orderBy(filterName, sort));
+  const q = query(
+    collection(db, "media"),
+    where(filterCategory, "==", filterName)
+  );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));
   return arr;

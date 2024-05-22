@@ -1,11 +1,8 @@
 # WTM API
 
-![](https://img.shields.io/npm/d18m/wtm-api) ![](https://img.shields.io/npm/v/wtm-api
-) ![](https://img.shields.io/github/stars/whatTodayMedia/wtm-api
-)
+![](https://img.shields.io/npm/d18m/wtm-api) ![](https://img.shields.io/npm/v/wtm-api) ![](https://img.shields.io/github/stars/whatTodayMedia/wtm-api)
 
 ## Installation
-
 
 Using npm:
 
@@ -14,9 +11,11 @@ $ npm install wtm-api
 ```
 
 Using yarn:
+
 ```zsh
 $ yarn add wtm-api
 ```
+
 ## Usage
 
 ## import
@@ -88,7 +87,6 @@ import {
 }
 ```
 
-
 ## utils
 
 ### list type
@@ -145,11 +143,19 @@ export const CategoryColors = {
   호러: Colors.yellow,
   SF: Colors.green,
 };
+
+export Count CategoryItems =
+  휴먼
+  로맨스: 우원해, 빨렷들
+  액션: red,
+  판타지: blue,
+  범죄: gray,
+  스릴러: brown,
+  미스터리: shallowGray,
+  코미디: pink,
+  느와르: shallowGray,
+  서바이벌: red,
+  호러: yellow,
+  SF: green,
+
 ```
-
-
-
-
-
-
-

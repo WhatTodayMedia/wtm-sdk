@@ -1,4 +1,4 @@
-import { collection, getDocs, query, orderBy, where } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../utils/fbase";
 export const getWtmData = async () => {
     const arr = [];
@@ -7,9 +7,9 @@ export const getWtmData = async () => {
     querySnapshot.forEach((doc) => arr.push(doc.data()));
     return arr;
 };
-export const getWtmFilterData = async (filterName, sort) => {
+export const getWtmFilterData = async (filterCategory, filterName) => {
     const arr = [];
-    const q = query(collection(db, "media"), orderBy(filterName, sort));
+    const q = query(collection(db, "media"), where(filterCategory, "==", filterName));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
     return arr;

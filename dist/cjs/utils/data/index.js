@@ -14,29 +14,17 @@ exports.Colors = {
     brown: "#a95e13",
 };
 exports.CategoryColors = {
-    휴먼: exports.Colors.orange,
-    로맨스: exports.Colors.purple,
-    액션: exports.Colors.red,
-    판타지: exports.Colors.blue,
-    범죄: exports.Colors.gray,
-    스릴러: exports.Colors.brown,
-    미스터리: exports.Colors.shallowGray,
-    코미디: exports.Colors.pink,
-    느와르: exports.Colors.shallowGray,
     서바이벌: exports.Colors.red,
+    액션: exports.Colors.red,
+    휴먼: exports.Colors.orange,
     호러: exports.Colors.yellow,
     SF: exports.Colors.green,
+    판타지: exports.Colors.blue,
+    범죄: exports.Colors.gray,
+    느와르: exports.Colors.shallowGray,
+    미스터리: exports.Colors.shallowGray,
+    스릴러: exports.Colors.brown,
+    코미디: exports.Colors.pink,
+    로맨스: exports.Colors.purple,
 };
 exports.CategoryItems = Object.keys(exports.CategoryColors);
-// 휴먼 : 주
-// 로맨스 : 보
-// 액션 ; 빨
-// 판타지 : 파
-// 범죄 : 회
-// 스릴러 : 갈
-// 미스터리 : 회
-// 코미디 : 분
-// 느와르 : 옅은 회
-// 서바이벌 : 빨
-// 호러 : 노
-// SF : 초

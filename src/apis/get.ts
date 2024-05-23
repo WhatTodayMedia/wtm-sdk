@@ -7,7 +7,7 @@ export const getWtmData = async () => {
   const q = query(collection(db, "media"));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));
-  return arr;
+  return arr.json();
 };
 
 export const getWtmFilterData = async (
@@ -26,7 +26,7 @@ export const getWtmFilterData = async (
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));
-  return arr;
+  return arr.json();
 };
 
 export const getWtmSearchData = async (keyword: string, category?: string) => {
@@ -38,7 +38,7 @@ export const getWtmSearchData = async (keyword: string, category?: string) => {
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));
-  return arr;
+  return arr.json();
 };
 
 export const getWtmDetailData = async (
@@ -49,5 +49,5 @@ export const getWtmDetailData = async (
   const q = query(collection(db, "media", subDocument, subCollection));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));
-  return arr;
+  return arr.json();
 };

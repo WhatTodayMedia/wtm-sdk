@@ -8,7 +8,7 @@ const getWtmData = async () => {
     const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"));
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
-    return arr;
+    return arr.json();
 };
 exports.getWtmData = getWtmData;
 const getWtmFilterData = async (tagName, filterNames) => {
@@ -16,7 +16,7 @@ const getWtmFilterData = async (tagName, filterNames) => {
     const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)("tag", "in", tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]), (0, firestore_1.where)("category", "array-contains-any", filterNames));
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
-    return arr;
+    return arr.json();
 };
 exports.getWtmFilterData = getWtmFilterData;
 const getWtmSearchData = async (keyword, category) => {
@@ -24,7 +24,7 @@ const getWtmSearchData = async (keyword, category) => {
     const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)(category ?? "title", ">=", keyword), (0, firestore_1.where)(category ?? "title", "<=", keyword + "\uf8ff"));
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
-    return arr;
+    return arr.json();
 };
 exports.getWtmSearchData = getWtmSearchData;
 const getWtmDetailData = async (subDocument, subCollection) => {
@@ -32,6 +32,6 @@ const getWtmDetailData = async (subDocument, subCollection) => {
     const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media", subDocument, subCollection));
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
-    return arr;
+    return arr.json();
 };
 exports.getWtmDetailData = getWtmDetailData;

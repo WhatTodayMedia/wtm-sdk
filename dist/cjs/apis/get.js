@@ -11,9 +11,9 @@ const getWtmData = async () => {
     return arr;
 };
 exports.getWtmData = getWtmData;
-const getWtmFilterData = async (tagNames, filterNames) => {
+const getWtmFilterData = async (tagName, filterNames) => {
     const arr = [];
-    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)("category", "in", filterNames), (0, firestore_1.where)("tag", "in", tagNames));
+    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)("tag", "in", tagName[0] === "전체" ? ["영화", "드라마", "예능"] : tagName), (0, firestore_1.where)("category", "in", filterNames));
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
     return arr;

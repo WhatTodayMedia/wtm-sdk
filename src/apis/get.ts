@@ -17,12 +17,12 @@ export const getWtmFilterData = async (
   const arr: any = [];
   const q = query(
     collection(db, "media"),
-    where("category", "in", filterNames),
     where(
       "tag",
       "in",
       tagName[0] === "전체" ? ["영화", "드라마", "예능"] : tagName
-    )
+    ),
+    where("category", "in", filterNames)
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));

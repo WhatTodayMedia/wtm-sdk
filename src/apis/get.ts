@@ -11,7 +11,7 @@ export const getWtmData = async () => {
 };
 
 export const getWtmFilterData = async (
-  tagName: TagType[],
+  tagName: TagType,
   filterNames: string[]
 ) => {
   const arr: any = [];
@@ -20,7 +20,7 @@ export const getWtmFilterData = async (
     where(
       "tag",
       "in",
-      tagName[0] === "전체" ? ["영화", "드라마", "예능"] : tagName
+      tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]
     ),
     where("category", "in", filterNames)
   );

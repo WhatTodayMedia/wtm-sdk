@@ -22,7 +22,7 @@ export const getWtmFilterData = async (
       "in",
       tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]
     ),
-    where("category", "in", filterNames)
+    where("category", "array-contains-any", filterNames)
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => arr.push(doc.data()));

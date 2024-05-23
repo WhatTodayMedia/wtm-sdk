@@ -29,7 +29,7 @@ import {
   WtmListType,
   CategoryItems,
   CategoryColors,
-} from "musinsa";
+} from "wtm-api";
 ```
 
 ## method

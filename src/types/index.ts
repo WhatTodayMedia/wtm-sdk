@@ -1,3 +1,5 @@
+import { DocumentData } from "firebase/firestore";
+
 export interface WtmListType {
   title: string;
   described: string;

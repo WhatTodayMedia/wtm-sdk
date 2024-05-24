@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getWtmDetailData = exports.getWtmSearchData = exports.getWtmFilterData = exports.getWtmData = void 0;
 const firestore_1 = require("firebase/firestore");
 const fbase_1 = require("../utils/fbase");
+const __1 = require("..");
 const getWtmData = async () => {
     const arr = [];
     const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"));
@@ -13,7 +14,13 @@ const getWtmData = async () => {
 exports.getWtmData = getWtmData;
 const getWtmFilterData = async (tagName, filterNames) => {
     const arr = [];
-    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)("tag", "in", tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]), (0, firestore_1.where)("category", "array-contains-any", filterNames));
+    const CategoryArr = __1.CategoryItems;
+    const filterArr1 = filterNames.slice(0, __1.CategoryItems.length / 2);
+    const filterArr2 = filterNames.slice(__1.CategoryItems.length / 2);
+    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)("tag", "in", tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]), (0, firestore_1.where)("category", "not-in", filterNames)
+    // where("category", "array-contains-any", filterNames),
+    // where("category", "array-contains", filterNames[0] ?? "")
+    );
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
     return arr;

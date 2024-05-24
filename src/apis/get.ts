@@ -1,6 +1,6 @@
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../utils/fbase";
-import { TagType, WtmListType } from "..";
+import { CategoryItems, CategoryType, TagType, WtmListType } from "..";
 
 export const getWtmData = async () => {
   const arr: WtmListType[] = [];
@@ -12,9 +12,14 @@ export const getWtmData = async () => {
 
 export const getWtmFilterData = async (
   tagName: TagType,
-  filterNames: string[]
+  filterNames: CategoryType[]
 ) => {
   const arr: WtmListType[] = [];
+
+  const CategoryArr = CategoryItems;
+  const filterArr1 = filterNames.slice(0, CategoryItems.length / 2);
+  const filterArr2 = filterNames.slice(CategoryItems.length / 2);
+
   const q = query(
     collection(db, "media"),
     where(
@@ -22,8 +27,11 @@ export const getWtmFilterData = async (
       "in",
       tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]
     ),
-    where("category", "array-contains-any", filterNames)
+    where("category", "not-in", filterNames)
+    // where("category", "array-contains-any", filterNames),
+    // where("category", "array-contains", filterNames[0] ?? "")
   );
+
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc: any) => arr.push(doc.data()));
   return arr;

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CategoryColors = exports.CategoryItems = exports.createWtmData = exports.getWtmSearchData = exports.getWtmFilterData = exports.getWtmData = void 0;
+exports.CategoryColors = exports.CategoryItems = exports.TagItems = exports.createWtmData = exports.getWtmSearchData = exports.getWtmFilterData = exports.getWtmData = void 0;
 const get_1 = require("./apis/get");
 Object.defineProperty(exports, "getWtmData", { enumerable: true, get: function () { return get_1.getWtmData; } });
 Object.defineProperty(exports, "getWtmFilterData", { enumerable: true, get: function () { return get_1.getWtmFilterData; } });
@@ -10,3 +10,4 @@ Object.defineProperty(exports, "createWtmData", { enumerable: true, get: functio
 const data_1 = require("./utils/data");
 Object.defineProperty(exports, "CategoryColors", { enumerable: true, get: function () { return data_1.CategoryColors; } });
 Object.defineProperty(exports, "CategoryItems", { enumerable: true, get: function () { return data_1.CategoryItems; } });
+Object.defineProperty(exports, "TagItems", { enumerable: true, get: function () { return data_1.TagItems; } });

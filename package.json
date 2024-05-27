@@ -1,7 +1,7 @@
 {
-  "name": "wtm-api",
-  "description": "wtm api",
-  "version": "1.6.6",
+  "name": "wtm-sdk",
+  "description": "wtm sdk",
+  "version": "1.6.8",
   "license": "MIT",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -28,11 +28,11 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/WTM-whatTodayMedia/wtm-api/issues",
+    "url": "https://github.com/WTM-whatTodayMedia/wtm-sdk/issues",
     "email": "dngh0825m@gmail.com"
   },
   "homepage": "https://tim-v2.netlify.app/",
-  "repository": "https://github.com/WTM-whatTodayMedia/wtm-api.git",
+  "repository": "https://github.com/WTM-whatTodayMedia/wtm-sdk.git",
   "keywords": [
     "wtm",
     "whatTodayMedia",

@@ -1,19 +1,19 @@
 # WTM API
 
-![](https://img.shields.io/npm/d18m/wtm-api) ![](https://img.shields.io/npm/v/wtm-api) ![](https://img.shields.io/github/stars/whatTodayMedia/wtm-api)
+![](https://img.shields.io/npm/d18m/wtm-sdk) ![](https://img.shields.io/npm/v/wtm-sdk) ![](https://img.shields.io/github/stars/whatTodayMedia/wtm-sdk)
 
 ## Installation
 
 Using npm:
 
 ```zsh
-$ npm install wtm-api
+$ npm install wtm-sdk
 ```
 
 Using yarn:
 
 ```zsh
-$ yarn add wtm-api
+$ yarn add wtm-sdk
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ import {
   WtmListType,
   CategoryItems,
   CategoryColors,
-} from "wtm-api";
+} from "wtm-sdk";
 ```
 
 ## method
@@ -92,7 +92,7 @@ import {
 ### list type
 
 ```ts
-import { WtmListType } from "wtm-api";
+import { WtmListType } from "wtm-sdk";
 
 export interface WtmListType {
   title: string;
@@ -114,7 +114,7 @@ export interface WtmListType {
 ### Colors, CategoryColors data
 
 ```ts
-import { Colors, CategoryColors } from "wtm-api";
+import { Colors, CategoryColors } from "wtm-sdk";
 
 export const Colors: Record<string, string> = {
   red: "#FF7D7D",

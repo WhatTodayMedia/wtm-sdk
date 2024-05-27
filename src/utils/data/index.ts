@@ -17,10 +17,8 @@ export const Colors: Record<string, string> = {
 export const CategoryColors: Record<CategoryType, string> = {
   서바이벌: Colors.red,
   액션: Colors.red,
-  휴먼: Colors.orange,
   호러: Colors.yellow,
   SF: Colors.green,
-  판타지: Colors.blue,
   범죄: Colors.gray,
   느와르: Colors.shallowGray,
   미스터리: Colors.shallowGray,

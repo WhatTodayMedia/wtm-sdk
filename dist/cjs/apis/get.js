@@ -17,7 +17,13 @@ const getWtmFilterData = async (tagName, filterNames) => {
     const CategoryArr = filterNames;
     const filterArr1 = CategoryArr.slice(0, __1.CategoryItems.length / 2);
     const filterArr2 = CategoryArr.slice(__1.CategoryItems.length / 2);
-    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), (0, firestore_1.where)("tag", "in", tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]), (0, firestore_1.where)("category", "not-in", filterArr1), (0, firestore_1.where)("category", "not-in", filterArr2));
+    const q = (0, firestore_1.query)((0, firestore_1.collection)(fbase_1.db, "media"), 
+    // where(
+    //   "tag",
+    //   "in",
+    //   tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]
+    // ),
+    (0, firestore_1.where)("category", "not-in", filterArr1), (0, firestore_1.where)("category", "not-in", filterArr2));
     const querySnapshot = await (0, firestore_1.getDocs)(q);
     querySnapshot.forEach((doc) => arr.push(doc.data()));
     return arr;

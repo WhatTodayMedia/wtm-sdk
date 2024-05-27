@@ -16,8 +16,10 @@ exports.Colors = {
 exports.CategoryColors = {
     서바이벌: exports.Colors.red,
     액션: exports.Colors.red,
+    휴먼: exports.Colors.orange,
     호러: exports.Colors.yellow,
     SF: exports.Colors.green,
+    판타지: exports.Colors.blue,
     범죄: exports.Colors.gray,
     느와르: exports.Colors.shallowGray,
     미스터리: exports.Colors.shallowGray,

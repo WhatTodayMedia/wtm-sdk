@@ -1,5 +1,3 @@
-import { DocumentData } from "firebase/firestore";
-
 export interface WtmListType {
   title: string;
   described: string;
@@ -17,15 +15,17 @@ export interface WtmListType {
 }
 
 export type CategoryType =
-  | "코미디"
+  | "휴먼"
   | "로맨스"
-  | "스릴러"
+  | "액션"
+  | "판타지"
   | "범죄"
+  | "스릴러"
   | "미스터리"
+  | "코미디"
   | "느와르"
   | "서바이벌"
-  | "SF"
   | "호러"
-  | "액션";
+  | "SF";
 
 export type TagType = "영화" | "드라마" | "예능" | "전체";

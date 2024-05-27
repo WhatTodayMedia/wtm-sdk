@@ -13,5 +13,5 @@ export interface WtmListType {
     trailer: string;
     watchaPedia: string;
 }
-export type CategoryType = "코미디" | "로맨스" | "스릴러" | "범죄" | "미스터리" | "느와르" | "서바이벌" | "SF" | "호러" | "액션";
+export type CategoryType = "휴먼" | "로맨스" | "액션" | "판타지" | "범죄" | "스릴러" | "미스터리" | "코미디" | "느와르" | "서바이벌" | "호러" | "SF";
 export type TagType = "영화" | "드라마" | "예능" | "전체";

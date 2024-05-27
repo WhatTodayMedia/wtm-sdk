@@ -16,9 +16,9 @@ export const getWtmFilterData = async (
 ) => {
   const arr: WtmListType[] = [];
 
-  const CategoryArr = CategoryItems;
-  const filterArr1 = filterNames.slice(0, CategoryItems.length / 2);
-  const filterArr2 = filterNames.slice(CategoryItems.length / 2);
+  const CategoryArr = filterNames;
+  const filterArr1 = CategoryArr.slice(0, CategoryItems.length / 2);
+  const filterArr2 = CategoryArr.slice(CategoryItems.length / 2);
 
   const q = query(
     collection(db, "media"),
@@ -27,9 +27,8 @@ export const getWtmFilterData = async (
       "in",
       tagName[0] === "전체" ? ["영화", "드라마", "예능"] : [tagName]
     ),
-    where("category", "not-in", filterNames)
-    // where("category", "array-contains-any", filterNames),
-    // where("category", "array-contains", filterNames[0] ?? "")
+    where("category", "not-in", filterArr1),
+    where("category", "not-in", filterArr2)
   );
 
   const querySnapshot = await getDocs(q);

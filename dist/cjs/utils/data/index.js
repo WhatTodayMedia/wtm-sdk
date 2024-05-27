@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CategoryItems = exports.CategoryColors = exports.Colors = void 0;
+exports.TagItems = exports.CategoryItems = exports.CategoryColors = exports.Colors = void 0;
 exports.Colors = {
     red: "#FF7D7D",
     purple: "#55155d",
@@ -28,3 +28,4 @@ exports.CategoryColors = {
     로맨스: exports.Colors.purple,
 };
 exports.CategoryItems = Object.keys(exports.CategoryColors);
+exports.TagItems = ["전체", "영화", "드라마", "예능"];

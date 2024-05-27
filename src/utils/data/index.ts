@@ -1,4 +1,4 @@
-import { CategoryType } from "../../types";
+import { CategoryType, TagType } from "../../types";
 
 export const Colors: Record<string, string> = {
   red: "#FF7D7D",
@@ -30,3 +30,4 @@ export const CategoryColors: Record<CategoryType, string> = {
 };
 
 export const CategoryItems = Object.keys(CategoryColors) as CategoryType[];
+export const TagItems = ["전체", "영화", "드라마", "예능"] as TagType[];

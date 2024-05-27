@@ -25,3 +25,4 @@ export const CategoryColors = {
     로맨스: Colors.purple,
 };
 export const CategoryItems = Object.keys(CategoryColors);
+export const TagItems = ["전체", "영화", "드라마", "예능"];

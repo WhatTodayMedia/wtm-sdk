@@ -1,4 +1,4 @@
-# WTM API
+# WTM SDK
 
 ![](https://img.shields.io/npm/d18m/wtm-sdk) ![](https://img.shields.io/npm/v/wtm-sdk) ![](https://img.shields.io/github/stars/whatTodayMedia/wtm-sdk)
 
@@ -144,18 +144,35 @@ export const CategoryColors = {
   SF: Colors.green,
 };
 
-export Count CategoryItems =
-  휴먼
-  로맨스: 우원해, 빨렷들
-  액션: red,
-  판타지: blue,
-  범죄: gray,
-  스릴러: brown,
-  미스터리: shallowGray,
-  코미디: pink,
-  느와르: shallowGray,
-  서바이벌: red,
-  호러: yellow,
-  SF: green,
+### Items data
 
+export const CategoryItems = {
+  서바이벌,
+  액션,
+  휴먼,
+  호러,
+  SF,
+  판타지,
+  범죄,
+  느와르,
+  미스터리,
+  스릴러,
+  코미디,
+  로맨스,
+};
+
+export const TagItems = {
+  서바이벌,
+  액션,
+  휴먼,
+  호러,
+  SF,
+  판타지,
+  범죄,
+  느와르,
+  미스터리,
+  스릴러,
+  코미디,
+  로맨스,
+};
 ```

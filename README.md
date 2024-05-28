@@ -143,9 +143,11 @@ export const CategoryColors = {
   호러: Colors.yellow,
   SF: Colors.green,
 };
+```
 
 ### Items data
 
+```ts
 export const CategoryItems = {
   서바이벌,
   액션,
